@@ -306,6 +306,8 @@ function addEventShowModalTransfer () {
             document.getElementById("senderFullName").value = sender.fullName;
             document.getElementById("senderEmail").value = sender.email;
             document.getElementById("senderBalance").value = sender.balance;
+            document.getElementById("fees").value = 10;
+
             
             const select = document.getElementById("recipientId");
             select.innerHTML="";

@@ -84,7 +84,7 @@ function handleCreate () {
         const phone = document.getElementById("phoneCreate").value;
         const address = document.getElementById("addressCreate").value;
 
-        const customer = {
+        const c = {
             id,
             fullName,
             email,
@@ -93,7 +93,7 @@ function handleCreate () {
             balance: 0,
             delete: 0
         };
-        customers.push(customer);
+        customers.push(c);
         getAllCustomers();
         addEventDeleteCustomer();
         addEventShowModalUpdate();
@@ -306,6 +306,7 @@ function addEventShowModalTransfer () {
             document.getElementById("senderFullName").value = sender.fullName;
             document.getElementById("senderEmail").value = sender.email;
             document.getElementById("senderBalance").value = sender.balance;
+            document.getElementById("fees").value = 10;
             
             const select = document.getElementById("recipientId");
             select.innerHTML="";
