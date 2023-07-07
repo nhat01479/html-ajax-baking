@@ -84,15 +84,7 @@ function handleCreate () {
         const phone = document.getElementById("phoneCreate").value;
         const address = document.getElementById("addressCreate").value;
 
-        const c = {
-            id,
-            fullName,
-            email,
-            phone,
-            address,
-            balance: 0,
-            delete: 0
-        };
+        const c = new Customer (id, fullName, email, phone, address, 0, 0);
         customers.push(c);
         getAllCustomers();
         addEventDeleteCustomer();
@@ -336,11 +328,11 @@ function handleTransfer(){
     const btnTransfer = document.getElementById('btnTransfer')
 
     btnTransfer.addEventListener("click", function(){
-    var sender = getCustomerById(customerId);
+    const sender = getCustomerById(customerId);
     console.log("sender " + sender);
 
-    var recipientId = +document.getElementById("recipientId").value;
-    var recipient = getCustomerById(recipientId);
+    const recipientId = +document.getElementById("recipientId").value;
+    const recipient = getCustomerById(recipientId);
     console.log("recipient " + recipient);
     
     if (sender.id === recipient.id) {

@@ -84,16 +84,9 @@ function handleCreate () {
         const phone = document.getElementById("phoneCreate").value;
         const address = document.getElementById("addressCreate").value;
 
-        const customer = {
-            id,
-            fullName,
-            email,
-            phone,
-            address,
-            balance: 0,
-            delete: 0
-        };
-        customers.push(customer);
+        const c = new Customer (id, fullName, email, phone, address, 0, 0);
+
+        customers.push(c);
         getAllCustomers();
         addEventDeleteCustomer();
         addEventShowModalUpdate();
