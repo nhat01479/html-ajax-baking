@@ -161,7 +161,7 @@ function handleCreate () {
 
                 let formValue = $(".form-control");
                 for (var i = 0; i < formValue.length; i++) {
-                    formValue[i].value = "";
+                    formValue[i].val("");
                 }
                 
             })
@@ -610,7 +610,7 @@ function handleTransfer(){
             const recipientNewBalance = recipientBalance + transferAmount;
 
             if (sender.id === recipient.id) {
-                $("#transfer-name-error").innerText = "Người nhận không hợp lệ";
+                $("#transfer-name-error").text("Người nhận không hợp lệ");
             } else {
                 
                 if (!isNaN(transferAmount)) {
