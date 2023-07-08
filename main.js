@@ -61,7 +61,7 @@ function renderCustomer(obj) {
 }
 
 function getAllCustomers() {
-    const bodyDiv = document.querySelector("#body-customer");
+    const bodyDiv = document.querySelector("#tbCustomer tbody");
     bodyDiv.innerHTML = "";
 
     customers.forEach(item => {
@@ -174,12 +174,23 @@ function handleUpdateCustomer(){
 
     customers[index] = customer;
 
+
     getAllCustomers()
+
+ 
 
     addEventShowModalUpdate()
     addEventDeleteCustomer()
     addEventShowModalDeposit()
     addEventShowModalTransfer()
+
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Nạp tiền thành công',
+        showConfirmButton: false,
+        timer: 1500
+    })
 
 
 })
@@ -280,6 +291,8 @@ function handleDeposit(){
     addEventDeleteCustomer()
     addEventShowModalDeposit()
     addEventShowModalTransfer()
+
+    
 
 })
 }

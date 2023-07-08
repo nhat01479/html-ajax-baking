@@ -1,3 +1,9 @@
+/* *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: 1px solid;
+} */
 header {
     background-color:  #299be4;
     height: 80px;
@@ -17,6 +23,7 @@ header {
     background-color: green;
     color: #fff;
 }
+
 .my-alert {
     position: fixed;
     bottom: 0;
