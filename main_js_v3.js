@@ -1,3 +1,6 @@
+/// <reference path="./assets/js/jquery-3.7.0.min.js" />
+
+
 const page = {
     url: {
         getAllCustomers: App.API_CUSTOMER + '?deleted=0',
@@ -7,7 +10,7 @@ const page = {
         updateBalance: App.API_CUSTOMER,
         deposit: App.API_DEPOSIT,
         withdraw: App.API_WITHDRAW,
-        getRecipients: App.API_CUSTOMER + '?id_ne=',
+        getRecipients: App.API_CUSTOMER + '?deleted=0' + '&id_ne=',
         deleteCustomer: App.API_CUSTOMER,
     },
     elements: {},

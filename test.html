@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./assets/bootstrap/v5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/fontawesome/v5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <style>
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form class="cmxform" id="commentForm" method="get" action="" >
+            <fieldset>
+              <legend>Please provide your name, email address (won't be published) and a comment</legend>
+              <p>
+                <label for="cname">Name (required, at least 2 characters)</label>
+                <input id="cname" name="name"  type="text" class="form-control">
+              </p>
+              <p>
+                <label for="cname">Age (required, at least 2 characters)</label>
+                <input id="cage" name="age" type="text" class="form-control">
+              </p>
+              <p>
+                <label for="cemail">E-Mail (required)</label>
+                <input id="cemail" type="text" name="email" class="form-control">
+              </p>
+              <p>
+                <label for="curl">URL (optional)</label>
+                <input id="curl" type="text" name="url" class="form-control">
+              </p>
+              <p>
+                <label for="ccomment">Your comment (required)</label>
+                <textarea type="text" id="ccomment" name="comment" class="form-control"></textarea>
+              </p>
+              <p>
+                <input class="submit form-control" type="submit" value="Submit" id="btnSubmit">
+              </p>
+            </fieldset>
+          </form>
+    </div>
+
+      <script>
+    //   $('#cname').on('blur ', () => {
+    //     if ($("#commentForm").valid()) {
+
+    //     }
+       
+    //   })
+      $("#commentForm").validate({
+        rules: {
+            name: {
+                required: true,
+                onblur: true
+            } ,
+            age: "required"
+            
+        },
+        messages: {
+            name: "Không được để trống"  ,
+            age: "Không được để trống"
+        }
+
+      });
+      
+      </script>
+</body>
+</html>
